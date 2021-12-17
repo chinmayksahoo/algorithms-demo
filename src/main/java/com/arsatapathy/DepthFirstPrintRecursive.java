@@ -2,7 +2,7 @@ package com.arsatapathy;
 
 import java.util.Map;
 
-public class DepthFirstSearchRecursive {
+public class DepthFirstPrintRecursive {
 
     public static void main(String[] args) {
         // Adjacency List
@@ -15,13 +15,13 @@ public class DepthFirstSearchRecursive {
                 'f', new Character[]{}
         );
 
-        DFS(graph, 'a');
+        DFP(graph, 'a');
     }
 
-    public static void DFS(Map<Character, Character[]> graph, char source) {
+    public static void DFP(Map<Character, Character[]> graph, char source) {
         System.out.print(source);
 
         for(char neighbour :graph.get(source))
-            DFS(graph, neighbour);
+            DFP(graph, neighbour);
     }
 }

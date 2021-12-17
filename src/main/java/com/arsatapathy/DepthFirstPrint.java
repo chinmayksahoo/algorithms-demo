@@ -3,7 +3,7 @@ package com.arsatapathy;
 import java.util.Map;
 import java.util.Stack;
 
-public class DepthFirstSearch {
+public class DepthFirstPrint {
 
     public static void main(String[] args) {
 
@@ -17,10 +17,10 @@ public class DepthFirstSearch {
                 'f', new Character[]{}
         );
 
-        DFS(graph, 'a');
+        DFP(graph, 'a');
     }
 
-    public static void DFS(Map<Character, Character[]> graph, char start) {
+    public static void DFP(Map<Character, Character[]> graph, char start) {
         Stack<Character> stack = new Stack<>();
 
         stack.push(start);
