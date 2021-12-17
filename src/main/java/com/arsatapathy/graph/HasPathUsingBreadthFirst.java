@@ -7,12 +7,13 @@ import java.util.Queue;
 public class HasPathUsingBreadthFirst {
 
     public static void main(String[] args) {
+        // Adjacency List
         Map<Character, Character[]> graph = Map.of(
                 'f', new Character[]{'g','i'},
                 'g', new Character[]{'h'},
                 'h', new Character[]{},
                 'i', new Character[]{'g','k'},
-                'j', new Character[]{'j','i'},
+                'j', new Character[]{'i'},
                 'k', new Character[]{}
         );
 
