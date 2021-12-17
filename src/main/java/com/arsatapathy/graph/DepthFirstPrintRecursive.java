@@ -1,4 +1,4 @@
-package com.arsatapathy;
+package com.arsatapathy.graph;
 
 import java.util.Map;
 
@@ -19,7 +19,7 @@ public class DepthFirstPrintRecursive {
     }
 
     public static void DFP(Map<Character, Character[]> graph, char source) {
-        System.out.print(source);
+        System.out.println(source);
 
         for(char neighbour :graph.get(source))
             DFP(graph, neighbour);
