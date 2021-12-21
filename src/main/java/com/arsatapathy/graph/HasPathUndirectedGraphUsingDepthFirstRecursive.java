@@ -30,23 +30,16 @@ public class HasPathUndirectedGraphUsingDepthFirstRecursive {
     }
 
     public static boolean hasPath(Map<Character, List<Character>> graph, char source, char destination, Set<Character> visited) {
-        Stack<Character> stack = new Stack<>();
 
-        stack.push(source);
+        if (visited.contains(source))
+            return false;
+        else
+            visited.add(source);
 
-        while (!stack.isEmpty()) {
-            char currentNode = stack.pop();
+        if (source == destination) return true;
 
-            if (visited.contains(currentNode))
-                return false;
-            else
-                visited.add(currentNode);
-
-            if (currentNode == destination) return true;
-
-            for (char neighbour :graph.get(currentNode))
-                if (hasPath(graph, neighbour, destination, visited)) return  true;
-        }
+        for (char neighbour :graph.get(source))
+            if (hasPath(graph, neighbour, destination, visited)) return  true;
 
         return false;
     }
