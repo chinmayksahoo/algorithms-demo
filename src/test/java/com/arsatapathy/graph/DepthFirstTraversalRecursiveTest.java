@@ -1,10 +1,16 @@
 package com.arsatapathy.graph;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
 import java.util.Map;
 
-public class DepthFirstPrintRecursive {
+public class DepthFirstTraversalRecursiveTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test_01() {
+
         // Adjacency List
         final Map<Character, Character[]> graph = Map.of(
                 'a', new Character[]{'b', 'c'},
@@ -15,13 +21,6 @@ public class DepthFirstPrintRecursive {
                 'f', new Character[]{}
         );
 
-        DFP(graph, 'a');
-    }
-
-    public static void DFP(Map<Character, Character[]> graph, char source) {
-        System.out.println(source);
-
-        for(char neighbour :graph.get(source))
-            DFP(graph, neighbour);
+       Assertions.assertEquals(List.of('a', 'b', 'd', 'f', 'c', 'e'), DepthFirstTraversalRecursive.DFT(graph, 'a'));
     }
 }
