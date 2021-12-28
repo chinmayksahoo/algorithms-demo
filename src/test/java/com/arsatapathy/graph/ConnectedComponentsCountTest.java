@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-public class UndirectedGraphConnectedComponentsCountTest {
+public class ConnectedComponentsCountTest {
 
     @Test
     public void test_01() {
@@ -18,6 +18,6 @@ public class UndirectedGraphConnectedComponentsCountTest {
                 5, new Integer[]{}
         );
 
-        Assertions.assertEquals(2, UndirectedGraphConnectedComponentsCount.count(graph));
+        Assertions.assertEquals(2, ConnectedComponentsCount.count(graph));
     }
 }

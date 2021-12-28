@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
 
-public class UndirectedGraphConnectedComponentsCount {
+public class ConnectedComponentsCount {
 
     public static int count(Map<Integer, Integer[]> graph) {
 
