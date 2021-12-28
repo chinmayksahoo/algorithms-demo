@@ -4,18 +4,6 @@ import java.util.*;
 
 public class ShortestPath {
 
-    public static void main(String[] args) {
-        char[][] edges = {
-                {'w', 'x'},
-                {'x', 'y'},
-                {'z', 'y'},
-                {'z', 'v'},
-                {'w', 'v'}
-        };
-
-        System.out.println(shortestPath(graph(edges), 'w', 'z'));
-    }
-
     public static int shortestPath(Map<Character, List<Character>> graph, char start, char end) {
 
         class Node {
