@@ -19,4 +19,17 @@ public class MaxSizeIslandTest {
 
         Assertions.assertEquals(5, MaxSizeIsland.maxIslandSize(grid));
     }
+
+    @Test
+    public void test_02() {
+
+        char[][] grid = {
+                {'W', 'L', 'W', 'W', 'W'},
+                {'W', 'L', 'W', 'W', 'W'},
+                {'W', 'W', 'W', 'L', 'W'},
+                {'W', 'W', 'L', 'L', 'W'}
+        };
+
+        Assertions.assertEquals(3, MaxSizeIsland.maxIslandSize(grid));
+    }
 }
