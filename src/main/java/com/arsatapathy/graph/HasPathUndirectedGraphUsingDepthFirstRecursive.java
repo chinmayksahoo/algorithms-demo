@@ -3,31 +3,6 @@ package com.arsatapathy.graph;
 import java.util.*;
 
 public class HasPathUndirectedGraphUsingDepthFirstRecursive {
-    public static void main(String[] args) {
-        char[][] edges = {
-                {'i', 'j'},
-                {'k', 'i'},
-                {'m', 'k'},
-                {'k', 'l'},
-                {'o', 'n'}
-        };
-
-        test(
-                () -> System.out.println(hasPath(graph(edges), 'i', 'm', new HashSet<>()))
-        );
-
-        test(
-                () -> System.out.println(hasPath(graph(edges), 'i', 'n', new HashSet<>()))
-        );
-
-        test(
-                () -> System.out.println(hasPath(graph(edges), 'o', 'n', new HashSet<>()))
-        );
-    }
-
-    public static void test(Test test) {
-        test.test();
-    }
 
     public static boolean hasPath(Map<Character, List<Character>> graph, char source, char destination, Set<Character> visited) {
 
