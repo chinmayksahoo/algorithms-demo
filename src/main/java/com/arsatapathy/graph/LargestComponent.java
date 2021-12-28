@@ -7,33 +7,22 @@ import java.util.Stack;
 
 public class LargestComponent {
 
-    public static void main(String[] args) {
-        // Adjacency List
-        final Map<Character, Character[]> graph = Map.of(
-                '0', new Character[]{'8', '1', '5'},
-                '1', new Character[]{'0'},
-                '5', new Character[]{'0', '8'},
-                '8', new Character[]{'0', '5'},
-                '2', new Character[]{'3', '4'},
-                '3', new Character[]{'2', '4'},
-                '4', new Character[]{'3', '2'}
-        );
+    public static int largestComponent(Map<Character, Character[]> graph) {
+        Set<Character> visitedSet = new HashSet<>();
 
-        Set<Character> set = new HashSet<>();
-
-        int count;
+        int count = 0;
         int maxCount = 0;
 
         for (Character node :graph.keySet()) {
-            count = largestComponent(graph, node, set);
+            count = components(graph, node, visitedSet);
 
             if (count > maxCount) maxCount = count;
         }
 
-        System.out.println(maxCount);
+        return maxCount;
     }
 
-    public static int largestComponent(Map<Character, Character[]> graph, Character start, Set<Character> set) {
+    public static int components(Map<Character, Character[]> graph, Character start, Set<Character> visited) {
         Stack<Character> stack = new Stack<>();
         int count = 0;
 
@@ -42,10 +31,10 @@ public class LargestComponent {
         while(!stack.isEmpty()) {
             Character current = stack.pop();
 
-            if (set.contains(current))
+            if (visited.contains(current))
                 continue;
             else
-                set.add(current);
+                visited.add(current);
 
             count++;
 
