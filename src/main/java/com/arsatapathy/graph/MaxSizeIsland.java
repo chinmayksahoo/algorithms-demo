@@ -5,16 +5,7 @@ import java.util.Set;
 
 public class MaxSizeIsland {
     public static void main(String[] args) {
-        char[][] grid = {
-                {'W', 'L', 'W', 'W', 'W'},
-                {'W', 'L', 'W', 'W', 'W'},
-                {'W', 'W', 'W', 'L', 'W'},
-                {'W', 'W', 'L', 'L', 'W'},
-                {'L', 'W', 'W', 'L', 'L'},
-                {'L', 'L', 'W', 'W', 'W'}
-        };
 
-        System.out.println("Mx Island Size: " + maxIslandSize(grid));
 
     }
 
