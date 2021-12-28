@@ -33,4 +33,9 @@ public class DepthFirstTraversalTest {
 
         Assertions.assertEquals(List.of(a, b, d, e, c, f), DepthFirstTraversal.DFT(a));
     }
+
+    @Test
+    public void test_02() {
+        Assertions.assertEquals(List.of(), DepthFirstTraversal.DFT(null));
+    }
 }

@@ -11,7 +11,7 @@ public class DepthFirstTraversal {
 
         Stack<Node> stack = new Stack<>();
 
-        stack.push(root);
+        if (root != null) stack.push(root);
 
         while (!stack.isEmpty()) {
             Node current = stack.pop();
