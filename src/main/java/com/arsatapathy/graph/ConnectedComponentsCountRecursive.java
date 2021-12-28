@@ -4,17 +4,12 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class UndirectedGraphConnectionComponentsCountRecursive {
-    public static void main(String[] args) {
-        Map<Integer, Integer[]> graph = Map.of(
-                1, new Integer[]{2},
-                2, new Integer[]{3,4},
-                3, new Integer[]{},
-                4, new Integer[]{2},
-                5, new Integer[]{}
-        );
+public class ConnectedComponentsCountRecursive {
+
+    public static int count(Map<Integer, Integer[]> graph) {
 
         int count = 0;
+
         Set<Integer> visited = new HashSet<>();
 
         for (Integer currentNode :graph.keySet()) {
@@ -22,7 +17,7 @@ public class UndirectedGraphConnectionComponentsCountRecursive {
                 count++;
         }
 
-        System.out.println(count);
+        return count;
     }
 
     public static boolean isConnected(Map<Integer, Integer[]> graph, Integer start, Set<Integer> visited) {
