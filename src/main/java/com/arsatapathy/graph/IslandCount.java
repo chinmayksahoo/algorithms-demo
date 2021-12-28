@@ -4,20 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class IslandCount {
-    public static void main(String[] args) {
-        char[][] grid = {
-                {'W', 'L', 'W', 'W', 'W'},
-                {'W', 'L', 'W', 'W', 'W'},
-                {'W', 'W', 'W', 'L', 'W'},
-                {'W', 'W', 'L', 'L', 'W'},
-                {'L', 'W', 'W', 'L', 'L'},
-                {'L', 'L', 'W', 'W', 'W'}
-        };
-
-        System.out.println("Count: " + islandCount(grid));
-
-    }
-
 
     public static int islandCount(char[][] grid) {
         int count = 0;
