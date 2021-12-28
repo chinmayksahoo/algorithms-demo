@@ -6,17 +6,11 @@ import java.util.Set;
 import java.util.Stack;
 
 public class UndirectedGraphConnectedComponentsCount {
-    public static void main(String[] args) {
 
-        Map<Integer, Integer[]> graph = Map.of(
-                1, new Integer[]{2},
-                2, new Integer[]{3,4},
-                3, new Integer[]{},
-                4, new Integer[]{2},
-                5, new Integer[]{}
-        );
+    public static int count(Map<Integer, Integer[]> graph) {
 
         int count = 0;
+
         Set<Integer> visited = new HashSet<>();
 
         for (Integer currentNode :graph.keySet()) {
@@ -24,8 +18,7 @@ public class UndirectedGraphConnectedComponentsCount {
                 count++;
         }
 
-        System.out.println(count);
-
+        return count;
     }
 
     public static boolean isConnected(Map<Integer, Integer[]> graph, Integer start, Set<Integer> visited) {
