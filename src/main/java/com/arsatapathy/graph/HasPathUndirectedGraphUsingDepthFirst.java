@@ -3,33 +3,6 @@ package com.arsatapathy.graph;
 import java.util.*;
 
 public class HasPathUndirectedGraphUsingDepthFirst {
-    public static void main(String[] args) {
-        char[][] edges = {
-                {'i', 'j'},
-                {'k', 'i'},
-                {'m', 'k'},
-                {'k', 'l'},
-                {'o', 'n'}
-        };
-
-        Map<Character, List<Character>> graph = graph(edges);
-
-        test(
-                () -> System.out.println(hasPath(graph, 'i', 'm'))
-        );
-
-        test(
-                () -> System.out.println(hasPath(graph, 'i', 'n'))
-        );
-
-        test(
-                () -> System.out.println(hasPath(graph, 'o', 'n'))
-        );
-    }
-
-    public static void test(Test test) {
-        test.test();
-    }
 
     public static Map<Character, List<Character>> graph(char[][] edges) {
         Map<Character, List<Character>> graph = new HashMap<>();
