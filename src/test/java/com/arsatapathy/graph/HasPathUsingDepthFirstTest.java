@@ -8,7 +8,7 @@ import java.util.Map;
 public class HasPathUsingDepthFirstTest {
 
     // Adjacency List
-    private Map<Character, Character[]> graph = Map.of(
+    private final Map<Character, Character[]> graph = Map.of(
             'f', new Character[]{'g','i'},
             'g', new Character[]{'h'},
             'h', new Character[]{},
