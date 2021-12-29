@@ -8,7 +8,7 @@ public class MinValue {
     public static int minValue(Node root) {
 
         Queue<Node> queue = new LinkedList<>();
-        int minValue = 0;
+        int minValue = Integer.MAX_VALUE;
 
         if (root != null) {
             queue.add(root);
