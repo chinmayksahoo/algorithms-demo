@@ -1,6 +1,6 @@
 package com.arsatapathy.tree;
 
-public class TotalWeight {
+public class TotalWeightRecursive {
 
     public static int totalWeight(Node root) {
         if (root == null) return 0;
