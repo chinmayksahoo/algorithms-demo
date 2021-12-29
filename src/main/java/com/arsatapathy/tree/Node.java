@@ -2,11 +2,15 @@ package com.arsatapathy.tree;
 
 public class Node {
 
-    private char data;
+    private final int weight;
     public Node left;
     public Node right;
 
-    Node(char data) {
-        this.data = data;
+    Node(int weight) {
+        this.weight = weight;
+    }
+
+    public int getWeight() {
+        return weight;
     }
 }

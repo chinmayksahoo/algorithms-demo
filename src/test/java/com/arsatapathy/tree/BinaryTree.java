@@ -10,12 +10,12 @@ public abstract class BinaryTree {
     //          / \   \
     //         d   e   f
 
-    protected static final Node a = new Node('a');
-    protected static final Node b = new Node('b');
-    protected static final Node c = new Node('c');
-    protected static final Node d = new Node('d');
-    protected static final Node e = new Node('e');
-    protected static final Node f = new Node('f');
+    protected static final Node a = new Node(3);
+    protected static final Node b = new Node(11);
+    protected static final Node c = new Node(4);
+    protected static final Node d = new Node(4);
+    protected static final Node e = new Node(2);
+    protected static final Node f = new Node(1);
 
     @BeforeAll
     public static void init() {
