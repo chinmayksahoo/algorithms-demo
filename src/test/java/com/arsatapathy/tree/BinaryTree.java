@@ -2,7 +2,7 @@ package com.arsatapathy.tree;
 
 import org.junit.jupiter.api.BeforeAll;
 
-public class BinaryTree {
+public abstract class BinaryTree {
     //        Binary Tree
     //             a
     //            / \
